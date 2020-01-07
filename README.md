@@ -26,7 +26,7 @@ I currently have this set up to monitor instances numbered with an id from 1 to 
 Your instances will need to be able to submit an http post.  To simulate and test use the 'curl' command
 ```
 # Example curl command
-curl -H "Content-Type: application/json" -X POST -d "{\"name\": \"$name\",\"isRunning\": 1, \"isWorking\": 0, \"id\": ${num}}" http://localhost:8888/instance
+curl -H "Content-Type: application/json" -X POST -d '{ "name": "instance-1", "isRunning": 1, "isWorking": 1, "id": 1}' http://localhost:8888/instance
 ```
 
 The api is currently set up where you must name the instance "instance-$num" where $num is an integer.
